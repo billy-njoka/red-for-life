@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  reg_number: 1
+  kcpe: 1
+  adm_date: 2012-11-28
+  gender: 
+  religion: MyString
+  address1: MyString
+  address2: MyString
+  hometown: MyString
+
+two:
+  name: MyString
+  reg_number: 1
+  kcpe: 1
+  adm_date: 2012-11-28
+  gender: 
+  religion: MyString
+  address1: MyString
+  address2: MyString
+  hometown: MyString

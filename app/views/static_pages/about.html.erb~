@@ -1,0 +1,10 @@
+<% provide(:title, 'About')%>
+
+
+    <h1>Welcome</h1>
+    <p>
+      Billy Njoka thinks the sky is the limit.
+    </p>
+  
+
+
