@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  username: MyString
+  student: false
+  staff: false
+  parent: false
+
+two:
+  email: MyString
+  username: MyString
+  student: false
+  staff: false
+  parent: false

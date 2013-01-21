@@ -1,10 +1,17 @@
 Ieoss::Application.routes.draw do
-  resources :staffs
+  
 
+resources :sessions, :only => [:new, :create, :destroy]
+match '/signup', :to => 'users#new'
+match '/signin', :to => 'sessions#new'
+match '/signout', :to => 'sessions#destroy'
+
+  resources :staffs
+  resources :users 
   resources :students
 
 
-  root to: 'static_pages#home'
+  #root to: 'static_pages#home'
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'

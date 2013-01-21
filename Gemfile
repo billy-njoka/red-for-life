@@ -5,10 +5,10 @@ gem 'bootstrap-sass', '2.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem "paperclip", "~> 3.0"
 gem 'sqlite3'
 gem 'execjs'
-
+ #gem 'devise'
 gem 'therubyracer'
 
 # Gems used only for assets and not required

@@ -1,8 +1,6 @@
-<% provide(:title, 'Help')%>
-
     <h1>Welcome</h1>
     <p>
-      Billy Njoka thinks the sky is the limit.
+     A great project in the works. 
     </p>
   
 

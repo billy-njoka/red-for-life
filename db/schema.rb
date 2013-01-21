@@ -11,28 +11,57 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121128091952) do
+ActiveRecord::Schema.define(:version => 20130104172307) do
+
+  create_table "parents", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "mobile_no"
+    t.integer  "parent_no"
+    t.string   "occupation"
+    t.string   "hometown"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "staffs", :force => true do |t|
     t.string   "name"
-    t.string   "email"
     t.integer  "staff_no"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "students", :force => true do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.integer  "reg_number"
     t.integer  "kcpe"
     t.date     "adm_date"
     t.string   "gender"
+    t.string   "email"
     t.string   "religion"
     t.string   "address1"
     t.string   "address2"
     t.string   "hometown"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "username"
+    t.boolean  "student"
+    t.boolean  "staff"
+    t.boolean  "parent"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
 
 end

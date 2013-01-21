@@ -1,12 +1,16 @@
 module ApplicationHelper
+def logo
+image_tag("logo.png", :alt => "	IEOSS", id: "logo")
+end
 
-def full_title(page_title)
+# Return a title on a per-page basis.
+def title
 base_title = "ieoss"
-if page_title.empty?
+if @title.nil?
 base_title
 else
-"#{base_title} | #{page_title}"
+"#{base_title} | #{@title}"
+end
 end
 end
 
-end

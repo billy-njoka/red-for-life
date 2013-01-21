@@ -1,0 +1,19 @@
+# Problem:
+# We want to customize field_error_proc for each action.
+# We also want field_error_proc to remain threadsafe.
+# Solution:
+# We can access the controller inside of the proc. We check is the controller has an
+# instance variable @field_error_proc. If so we invoke it. If not we invoke the default proc.
+def override_field_error_proc
+  pre = ActionView::Base.field_error_proc
+  ActionView::Base.field_error_proc = proc { |input, instance|
+    proc = instance.instance_variable_get('@template_object').controller.instance_variable_get('@field_error_proc')
+    if proc.nil?
+      pre.call(input, instance)
+    else
+      proc.call(input, instance)
+    end
+  }
+end
+
+override_field_error_proc
