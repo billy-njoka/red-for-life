@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
+<p>
+<b>Photo:</b>
+<%= image_tag @student.avatar.url(:medium) %>
 
+</p>
 <p>
   <b>Name:</b>
-  <%= @student.name %>
+  <%= @student.first_name %>
 </p>
 
 <p>

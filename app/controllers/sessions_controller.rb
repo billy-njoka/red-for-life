@@ -13,9 +13,11 @@ render 'new'
 else
 flash[:success] = "You have successfully signed in!"
 sign_in user
-redirect_to user
+redirect_back_or user
 end
 end
+
+
 
 def destroy
 sign_out

@@ -43,6 +43,7 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
+  
 }
 
 input {
@@ -148,3 +149,62 @@ footer {
   @include box_sizing;
 }
 
+#student_adm_date_1i {
+float: left;
+width: 150px;
+}
+#student_adm_date_2i {
+float: left;
+width: 150px;
+}
+#student_adm_date_3i {
+float: left;
+width: 150px;
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+/*
+.gravatar {
+
+  float: left;
+  margin-right: 10px;
+}
+*/
